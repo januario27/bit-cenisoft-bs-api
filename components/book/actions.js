@@ -1,6 +1,9 @@
 const Book = require('./model')
 
 const createBook = (req, res) => {
+
+  console.log("Creando libro");
+  console.dir(req);
   const newBook = new Book(req.body)
   newBook.save((error, bookSaved) => {
     if (error) {
